@@ -1,0 +1,50 @@
+{
+  "name": "@starkswap/ironfleet-contracts",
+  "version": "0.0.1",
+  "description": "Starkswap Ironfleet V1 contracts",
+  "scripts": {
+    "compile:l1": "yarn hardhat compile",
+    "compile:l2": "yarn hardhat starknet-compile contracts/l2/L2Admiral.cairo contracts/l2/testing/MockStarkGate.cairo",
+    "compile": "yarn compile:l1 && yarn compile:l2",
+    "test": "yarn test:l1 && yarn test:l2",
+    "test:l1": "yarn hardhat test tests/l1/*",
+    "test:l2": "pytest -s tests/l2/pytest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Starkswap/ironfleet-contracts.git"
+  },
+  "keywords": [
+    "starkswap",
+    "ironfleet",
+    "yearn",
+    "ethereum",
+    "cairo-lang",
+    "cairo",
+    "starknet",
+    "starkware"
+  ],
+  "files": [
+    "/starknet-artifacts/contracts/l2/L2Admiral.cairo/",
+    "/artifacts/contracts/l1/L1Admiral.sol/"
+  ],
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@openzeppelin/contracts": "^3.4.1",
+    "@shardlabs/starknet-hardhat-plugin": "^0.6.2",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^16.0.0",
+    "chai": "^4.3.4",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.3",
+    "husky": "^4.2.5",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "hardhat": "^2.10.1"
+  },
+  "License": "GPL-3.0-only"
+}

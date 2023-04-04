@@ -1,0 +1,7 @@
+.idea
+artifacts
+cache
+node_modules
+starknet-artifacts
+venv
+__pycache__
